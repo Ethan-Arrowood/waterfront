@@ -1,0 +1,38 @@
+html {
+    font-family: 'Open Sans'
+  }
+  h1 {
+    margin-bottom: 2px;
+  }
+  .authorText {
+    margin-top: 2px;
+  }
+  #map {
+    width: 600px;
+    height: 400px;
+    border: 2px solid #333;
+    border-radius: 5px;
+  }
+  .infoLegend {
+    background-color: #FFF;
+    border: 2px solid #000;
+    border-radius: 5px;
+    padding: 10px 10px;
+    font-size: 1rem;
+    font-weight: 600;
+  }
+  .infoLegend p {
+    margin: 2px;
+  }
+  input[type=text] {
+    border-radius: 10px;
+    border-style: solid;
+    border-color:#999;
+    width: 525px;
+    padding: 5px;
+    -webkit-appearance: none;
+  }
+  button{
+    border-radius: 10px;
+    height: 29.2px;
+  }

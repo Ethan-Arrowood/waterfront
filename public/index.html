@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Waterfront</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css" />
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet"> 
+  <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"></script>
+  <script src="https://unpkg.com/@mapbox/leaflet-pip@latest/leaflet-pip.js"></script>
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-Bx4pytHkyTDy3aJKjGkGoHPt3tvv6zlwwjc3iqN7ktaiEMLDPqLSZYts2OjKcBx1" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Waterfront</h1>
+  <p class="authorText">Created by Julia Cotter, Colin Hennessey, and Ethan Arrowood</p>
+  <div id="map"></div>
+  <p class="searchText">Enter Address in the search bar below</p>
+  
+  <form>
+    <input id="address" type="text" name="address" placeholder="77 Massachusetts Ave, Cambridge, MA 02142">
+    <button id="submitter"><i class="fas fa-house-flood"></i></button>
+    <div id="output"></div>
+  </form>
+  <script src="addressConvert.js"></script>
+  <script src="map.js"></script>
+
+  <h3>Flood Zone Potential</h3>
+  <p>Unfortunately, </p>
+
+</body>
+</html>

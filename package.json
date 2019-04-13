@@ -1,0 +1,28 @@
+{
+  "name": "rshackathon",
+  "version": "1.0.0",
+  "description": "",
+  "main": "inside.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ethan-Arrowood/rshackathon.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ethan-Arrowood/rshackathon/issues"
+  },
+  "homepage": "https://github.com/Ethan-Arrowood/rshackathon#readme",
+  "dependencies": {
+    "fastify": "^2.2.0",
+    "fastify-static": "^2.4.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.11"
+  }
+}
