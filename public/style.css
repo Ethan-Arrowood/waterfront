@@ -58,10 +58,11 @@ a {
 }
 #map {
   margin-top: 30px; 
-  width: 700px;
-  height: 500px;
+  width: 650px;
+  height: 450px;
   border: 2px solid #333;
   border-radius: 5px;
+  
   z-index: 0;
 }
 .infoLegend {
@@ -79,6 +80,10 @@ a {
   display: grid;
   grid-template-columns: 33% 33% 33%;
   grid-gap: 10px;
+  padding: 175px;
+  grid-gap: 10px;
+  top-margin: 20px;  padding: 175px;
+  text-align: center;
   padding: 175px;
   text-align: center;
 }
