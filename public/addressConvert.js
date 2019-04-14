@@ -4,6 +4,14 @@ const api_url = 'https://api.opencagedata.com/geocode/v1/geojson'
 document.getElementById("submitter").addEventListener("click", function(event){
   const address = document.getElementById("address").value
   const r = `${api_url}?q=${encodeURIComponent(address)}&key=${encodeURIComponent(api_key)}&pretty=1`
+  var divElement1 = document.querySelector("#floodDiv-9in");
+  var classValues1 = divElement1.classList.replace("main", "hide");
+  var divElement2 = document.querySelector("#floodDiv-21in");
+  var classValues2 = divElement2.classList.replace("main", "hide");
+  var divElement3 = document.querySelector("#floodDiv-36in");
+  var classValues3 = divElement3.classList.replace("main", "hide");
+  var divElement4 = document.querySelector("#noFloodDiv");
+  var classValues4 = divElement4.classList.replace("main", "hide");
   fetch(r)
     .then(res => res.json())
     .then(data => {
@@ -19,31 +27,27 @@ document.getElementById("submitter").addEventListener("click", function(event){
       const coords = data.features[maxIndex].geometry.coordinates
       const isInMap = isAddressInMap(coords)
       const markerIcon = L.icon({
-        iconUrl: (isInMap >= 0) ? 'flood.png' : 'house.png',
+        iconUrl: (isInMap >= 0) ? '/images/flood.png' : '/images/house.png',
         iconSize: [40, 40],
         iconAnchor: [20, 20]
       })
       if(isInMap == 0){
         var divElement = document.querySelector("#floodDiv-9in");
-        var classValues = divElement.classList.remove("hide");
-        var divE2 = document.querySelector("#link");
-        var classVal2 = divE2.classList.remove("hide");
+        var classValues = divElement.classList.replace("hide", "main");
+        
       }
       else if (isInMap == 1){
         var divElement = document.querySelector("#floodDiv-21in");
-        var classValues = divElement.classList.remove("hide");
-        var divE2 = document.querySelector("#link");
-        var classVal2 = divE2.classList.remove("hide");
+        var classValues = divElement.classList.replace("hide", "main");
+        
       }
       else if (isInMap == 2){
         var divElement = document.querySelector("#floodDiv-36in");
-        var classValues = divElement.classList.remove("hide");
-        var divE2 = document.querySelector("#link");
-        var classVal2 = divE2.classList.remove("hide");
+        var classValues = divElement.classList.replace("hide", "main");
       }
       else{
         var divElement = document.querySelector("#noFloodDiv");
-        var classValues = divElement.classList.remove("hide");
+        var classValues = divElement.classList.replace("hide", "main");
       }
       const l_coords = [coords[1], coords[0]]
       L.marker(l_coords, {icon: markerIcon}).addTo(map)

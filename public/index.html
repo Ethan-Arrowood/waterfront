@@ -17,56 +17,73 @@
   <nav>
     <ul class="nav-bar">
       <li class="nav-button"><a href="#home" class="nav-text">Home</a></li>
-      <li class="nav-button"><a href="#map" class="nav-text">Map</a></li>
+      <li class="nav-button"><a href="#map-container" class="nav-text">Map</a></li>
+      <li class="nav-button"><a href="#resources" class="nav-text">Resources</a></li>
     </ul>
   </nav>
+
   <div class="main">
     <div id="home">
-    <h1 class="name">Waterfront</h1>
-    <p class="authorText">Created by Julia Cotter, Colin Hennessey, and Ethan Arrowood</p>
-    <p class="descr">Boston is positioned for great loss in the face of rising sea level. 
-      The datasets used plot areas of potential coastal and riverine flooding in Boston under various sea level rise scenarios
-      (9-inch in 2030s, 21-inch in 2050s, and 36-inch in 2070s) at high tide.</p>
+      <h1 class="name">Waterfront</h1>
+      <p class="authorText">Created by Julia Cotter, Colin Hennessey, and Ethan Arrowood</p>
+      <p class="descr">Boston is positioned for great loss in the face of rising sea level. 
+        The datasets used plot areas of potential coastal and riverine flooding in Boston under various sea level rise scenarios
+        (9-inch in 2030s, 21-inch in 2050s, and 36-inch in 2070s) at high tide.</p>
     </div>
-    <div id="map"></div>
-    <p class="searchText">Enter Address in the search bar below</p>
-    <form>
-      <input id="address" type="text" name="address" placeholder="e.g. 123 Main St, Boston, MA 02118">
-      <button id="submitter"><i class="fas fa-house-flood"></i></button>
-      <div id="output"></div>
-    </form>
+    
+    <div id="map-container">
+      <div id="map"></div>
+      <p class="searchText">Enter Address in the search bar below</p>
+      <form>
+        <input id="address" type="text" name="address" placeholder="e.g. 123 Main St, Boston, MA 02118">
+        <button id="submitter"><i class="fas fa-house-flood"></i></button>
+        <div id="output"></div>
+      </form>
+    </div>
+
+    <div id="flood-results"></div>
+    <div id="floodDiv-9in" class="hide main">
+      <h3>9-inch Sea Level Rise Potential</h3>
+      <p class="descr">Unfortunately, this address falls into the areas which are affected by the possible flooding due to sea levels rising at least 9 inches in 2030s. 
+          See below for some great resources that may help you understand the problem and prepare for the worse!</p>
+    </div>
+    <!-- McConnell Park Boston, MA 02125  -->
+    <div id="floodDiv-21in" class="hide">
+      <h3>21-inch Sea Level Rise Potential</h3>
+      <p class="descr">Unfortunately, this address falls into the areas which are affected by the possible flooding due to sea levels rising at least 21 inches in 2050s. 
+          See below for some great resources that may help you understand the problem and prepare for the worse!</p>
+    </div>
+    <!-- 1 Central Wharf, Boston, MA 02110 -->
+    <div id="floodDiv-36in" class="hide">
+      <h3>36-inch Sea Level Rise Potential</h3>
+      <p class="descr">Unfortunately, this address falls into the areas which are affected by the possible flooding due to sea levels rising at least 36 inches in 2070s. 
+        See below for some great resources that may help you understand the problem and prepare for the worse!</p>
+    </div>
+    <!-- 31 Hillside St, Boston, MA 02120 -->
+    <div id="noFloodDiv" class="hide">
+      <h3>No Flood Zone Potential</h3>
+      <p class="descr">This address does not fall into the areas which are affected by the possibility of flooding due to the rising water levels.</p>
+    </div>
   </div>
-  
+
+
+  <div id="resources"></div>
+  <div id="link" class="flood-link-card">
+    <a href="https://www.nationalgeographic.com/environment/global-warming/sea-level-rise/" target="_blank">
+      <img src="./images/natgeo.jpg" alt="National Geographic" style="width:100%">
+      <h4>National Geographics</h4>
+    </a>
+    <a href="https://www.redcross.org/get-help/how-to-prepare-for-emergencies/types-of-emergencies/flood.html" target="_blank">
+      <img src="/images/redcross.jpg" alt="Red Cross" style="width:100%;height:65%">
+      <h4>American Red Cross</h4>
+    </a>
+    <a href="https://www.ready.gov/floods" target="_blank">
+      <img src="/images/ready.jpg" alt="Ready" style="width:100%">
+      <h4>Ready</h4>
+    </a>
+  </div>
+
   <script src="addressConvert.js"></script>
   <script src="map.js"></script>
-
-  <div id="floodDiv-9in" class="hide main">
-    <!-- 1 Central Wharf, Boston, MA 02110 -->
-    <h3>9-inch Sea Level Rise Potential</h3>
-    <p>Unfortunately, this address falls into the areas which are affected by the possible flooding due to sea levels rising at least 9 inches in 2030s. 
-      Below are some links that may help you understand the problem:</p>
-  </div>
-  <div id="floodDiv-21in" class="hide main">
-    <h3>21-inch Sea Level Rise Potential</h3>
-    <p>Unfortunately, this address falls into the areas which are affected by the possible flooding due to sea levels rising at least 21 inches in 2050s. 
-      Below are some links that may help you understand the problem:</p>
-  </div>
-  <div id="floodDiv-36in" class="hide main">
-      <h3>36-inch Sea Level Rise Potential</h3>
-      <p>Unfortunately, this address falls into the areas which are affected by the possible flooding due to sea levels rising at least 36 inches in 2070s. 
-        Below are some links that may help you understand the problem:</p>
-    </div>
-  <div id="noFloodDiv" class="hide main">
-    <h3>No Flood Zone Potential</h3>
-    <p>This address does not fall into the areas which are affected by the possibility of flooding due to the rising water levels.</p>
-  </div>
-
-  <div id="link" class="hide flood-link-card">
-    <h4>American Red Cross</h4>
-    <p>Click <a href="https://www.redcross.org/get-help/how-to-prepare-for-emergencies/types-of-emergencies/flood.html">here</a> to learn how to keep </p>
-    
-    
-  </div>
-
 </body>
 </html>
