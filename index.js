@@ -11,7 +11,7 @@ server.get('/', (request, reply) => {
   reply.sendFile('index.html')
 })
 
-server.listen(3000, (err) => {
+server.listen(3000, '0.0.0.0', (err) => {
   if (err) console.error(err)
   console.log('Server running')
 })
