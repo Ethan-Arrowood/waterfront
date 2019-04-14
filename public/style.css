@@ -47,6 +47,7 @@ a {
 .name {
   text-align: center;
   margin-bottom: 2px;
+  font-size: 60px;
 }
 .authorText {
   margin-top: 2px;
