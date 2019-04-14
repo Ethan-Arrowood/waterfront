@@ -24,6 +24,11 @@ const geoJsonDataObj = [
   }
 ]
 
+const geoJsonBoston = {
+  url: '/data/City_of_Boston_Boundary.geojson',
+  color: '#3f3f3f'
+}
+
 async function fetchData (dataObj) {
   await fetch(dataObj['url'])
     .then(res => res.json())
@@ -39,6 +44,7 @@ async function fetchAllGeoJson () {
     await fetchData(geoJsonDataObj[0])
     await fetchData(geoJsonDataObj[1])
     await fetchData(geoJsonDataObj[2])
+    await fetchData(geoJsonBoston)
   } catch (err) {
     console.error(err)
   }
@@ -58,11 +64,11 @@ legend.addTo(map)
 
 // leafletPip.bassackwards = true
 function isAddressInMap(point) {
-  let isInMap = false
-  geoJsonLayers.forEach(layer => {
-    const polys = leafletPip.pointInLayer(point, layer)
+  var isInMap = -1
+  for(let i = geoJsonLayers.length-2; i >= 0; i--){
+    const polys = leafletPip.pointInLayer(point, geoJsonLayers[i])
     console.log(polys)
-    if (polys.length > 0) isInMap = true
-  })
+    if (polys.length > 0) isInMap = i
+  }
   return isInMap
 }
