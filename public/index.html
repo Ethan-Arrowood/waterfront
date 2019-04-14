@@ -26,15 +26,14 @@
     <div id="home">
       <h1 class="name">Waterfront</h1>
       <p class="authorText">Created by Julia Cotter, Colin Hennessey, and Ethan Arrowood</p>
-      <p class="descr">Boston is positioned for great loss in the face of rising sea level. 
-        The datasets used plot areas of potential coastal and riverine flooding in Boston under various sea level rise scenarios
-        (9-inch in 2030s, 21-inch in 2050s, and 36-inch in 2070s) at high tide.</p>
+      <p class="descr">Boston is positioned for great loss in the face of rising sea level caused by factors such as thermal expansion and melting glaciers.
+        Check below if your home is in a potential flood zone.</p>
     </div>
     
     <div id="map-container">
       <div id="map"></div>
-      <p class="searchText">Enter Address in the search bar below</p>
-      <form>
+      <p class="main">Enter Address in the search bar below</p>
+      <form class>
         <input id="address" type="text" name="address" placeholder="e.g. 123 Main St, Boston, MA 02118">
         <button id="submitter"><i class="fas fa-house-flood"></i></button>
         <div id="output"></div>
@@ -70,16 +69,19 @@
   <div id="resources"></div>
   <div id="link" class="flood-link-card">
     <a href="https://www.nationalgeographic.com/environment/global-warming/sea-level-rise/" target="_blank">
-      <img src="./images/natgeo.jpg" alt="National Geographic" style="width:100%">
+      <img src="./images/natgeo.jpg" alt="National Geographic" style="width:100%;height:280px">
       <h4>National Geographics</h4>
-    </a>
-    <a href="https://www.redcross.org/get-help/how-to-prepare-for-emergencies/types-of-emergencies/flood.html" target="_blank">
-      <img src="/images/redcross.jpg" alt="Red Cross" style="width:100%;height:65%">
-      <h4>American Red Cross</h4>
+      <p>Learn more about what factors cause changes in sea level and what impacts it makes.</p>
     </a>
     <a href="https://www.ready.gov/floods" target="_blank">
-      <img src="/images/ready.jpg" alt="Ready" style="width:100%">
+      <img src="/images/ready.jpg" alt="Ready" style="width:100%;height:280px">
       <h4>Ready</h4>
+      <p>Learn more on what to do bfeore, during, and after a flood.</p>
+    </a>
+    <a href="https://www.redcross.org/get-help/how-to-prepare-for-emergencies/types-of-emergencies/flood.html" target="_blank">
+      <img src="/images/redcross.jpg" alt="Red Cross" style="width:100%;height:280px">
+      <h4>American Red Cross</h4>
+      <p>Learn more about how to protect your loved ones through a flood.</p>
     </a>
   </div>
 
